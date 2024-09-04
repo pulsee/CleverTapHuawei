@@ -24,7 +24,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -70,10 +70,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     // =======changes=====
     implementation(libs.push)
-    implementation("com.clevertap.android:clevertap-hms-sdk:1.3.4")
+//    implementation("com.clevertap.android:clevertap-hms-sdk:1.3.4")
     implementation("com.clevertap.android:clevertap-android-sdk:6.2.1")
     implementation("androidx.fragment:fragment:1.3.6")
     implementation(platform("com.google.firebase:firebase-bom:31.0.0"))
     implementation("com.google.firebase:firebase-messaging")
+    implementation ("com.huawei.hms:push:6.11.0.300")
     // ======================
 }
